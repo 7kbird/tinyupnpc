@@ -1,0 +1,14 @@
+language: cpp
+compiler: gcc
+
+before_install:
+  - sudo apt-get update
+install: cmake make get-deps
+
+before_script:
+  - cd build
+  - mkdir project
+  - cd project
+  - ../MakeUnixMakefiles.sh 
+
+script: make all
