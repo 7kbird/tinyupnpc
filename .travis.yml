@@ -7,8 +7,9 @@ before_install:
 
 before_script:
   - cd build
+  - chmod -R 777 ./*
   - mkdir project
   - cd project
-  - ../MakeUnixMakefiles.sh 
+  - ../MakeUnixMakefiles.sh
 
 script: make all
